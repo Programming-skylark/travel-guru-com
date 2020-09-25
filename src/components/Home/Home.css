@@ -1,0 +1,47 @@
+
+.circle{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 16;
+    height: 100px;
+}
+.bg1{
+    width: 100%;
+    height: 650px;
+    background:  no-repeat center fixed;     
+    background-size: cover;
+}
+.cd{
+    height: 280px;
+    width: 180px;
+    margin-right: 10px;
+    background:  no-repeat;     
+    background-size: contain;
+   
+}
+.cd:hover{
+    box-shadow: 5px 5px 40px black;
+    border: 2px solid #F9A51A;
+    border-radius: 20px;
+}
+.card-text{
+    font-weight: 600;
+    color: white;
+    padding-top: 220px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+.details{
+    color: white;
+    padding-top: 200px;
+    padding-left: 230px;
+}
+.btn-login{
+    background-color: #F9A51A;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    
+}

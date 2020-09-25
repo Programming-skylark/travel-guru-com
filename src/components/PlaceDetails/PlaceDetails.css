@@ -1,0 +1,15 @@
+.placeDiv{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 16;
+    height: 650px;
+    background:  no-repeat center fixed;     
+    background-size: cover;
+}
+.leftPart{
+    margin-top:100px;
+    margin-left: 100px;
+    width: 70%;
+}
