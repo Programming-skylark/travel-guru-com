@@ -5,8 +5,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Demo from './components/Demo/Demo';
-import DemoForm from './components/DemoForm/DemoForm';
 import Home from './components/Home/Home';
 import HotelInfo from './components/HotelInfo/HotelInfo';
 import Login from './components/Login/Login';
@@ -20,10 +18,13 @@ export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({
     isSignedIn: false,
-    name: '',
+    fname: '',
+    lname: '',
     email: '',
     password: '',
-    existingUser: true
+    cPassword: '',
+    existingUser: true,
+    allFormValid: true
   });
  
   return (

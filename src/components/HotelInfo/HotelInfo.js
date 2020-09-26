@@ -1,13 +1,31 @@
+
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import fakeData from '../../fakeData';
 import Hotel from '../Hotel/Hotel';
+import { MapContainer } from '../MapContainer/MapContainer';
 import NavOther from '../NavOther/NavOther';
 import './HotelInfo.css';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import Map from '../Map';
+//import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 const HotelInfo = () => {
+    const location = {
+        address: "COX's BAZAR",
+        lat: 21.426072,
+        lng: 91.979017,
+      } 
+      const location1 = {
+        address: "SREEMANGAL",
+        lat: 24.306198, 
+        lng: 91.730408,
+      } 
+      const location2 = {
+        address: "SUNDARBANS",
+        lat: 21.949692, 
+        lng: 89.183350,
+      } 
     const {bedType} = useParams();
     const place = fakeData.find(pd => pd.key == bedType);
     console.log(place);
@@ -25,15 +43,19 @@ const HotelInfo = () => {
 
                 </Col>
                 <Col className="colu2" xs={6}>
-                    <Map google={this.props.google} zoom={14}>
-                    
-                    <Marker onClick={this.onMarkerClick}
-                            name={'Current location'} />
-
-                    <InfoWindow onClose={this.onInfoWindowClose}>
+                    {
+                        place.name === "COX'S BAZAR" &&
+                        <Map location={location} zoomLevel={10}></Map>
                         
-                    </InfoWindow>
-                    </Map>
+                    }
+                    {
+                        place.name === "SRIMANGAL" &&
+                        <Map location={location1} zoomLevel={10}></Map>
+                    }
+                    {
+                        place.name === "SUNDARBANS" &&
+                        <Map location={location2} zoomLevel={10}></Map>
+                    }
                 </Col>
             </Row>
         </div>
@@ -42,6 +64,4 @@ const HotelInfo = () => {
 
 
 
-export default GoogleApiWrapper({
-    apiKey: ("AIzaSyBDqX2C5etsaX0x1CkQxAIn1A2tzOA64-4")
-  })(HotelInfo)
+export default HotelInfo;

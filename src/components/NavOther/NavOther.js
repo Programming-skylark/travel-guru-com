@@ -39,7 +39,7 @@ const NavOther = () => {
                     <input className="search" style={{borderRadius: "1px solid white", width: "50px"}} type="text" placeholder="Search your Destination...    " />
                     
                 </li>
-                <li>News</li>
+                <li><Link to="/"  style={{textDecoration: "none", color: "black"}}>Home</Link></li>
                 <li>Destination</li> 
                 <li>Blog</li>
                 <li>Contact</li>

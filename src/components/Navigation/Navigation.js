@@ -44,7 +44,7 @@ const Navigation = () => {
                     <input type="text" placeholder="Search your Destination...    " className="search"/>
                     
                 </li>
-                <li>News</li>
+                <li><Link to="/"  style={{textDecoration: "none", color: "white"}}>Home</Link></li>
                 <li>Destination</li>
                 <li>Blog</li>
                 <li>Contact</li>
